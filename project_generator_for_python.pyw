@@ -9,6 +9,7 @@ requirements_text = \
 """ # ---- GENERATED --------
 # example requirement
 numpy
+pytest
 # ---- USER --------
 """
 

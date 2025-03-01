@@ -1,0 +1,5 @@
+ # ---- GENERATED --------
+# example requirement
+numpy
+pytest
+# ---- USER --------

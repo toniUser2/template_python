@@ -24,6 +24,7 @@ install requirements
 python -m venv myenv
 ./venv/Scripts/Activate.ps1
 pip install -r .\requirements.txt
+pip install -e . // but dont know what it is good for...
 ```
 
 # Dev Guide
