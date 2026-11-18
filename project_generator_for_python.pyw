@@ -48,7 +48,7 @@ pip install -r .\requirements.txt
 # MAIN 
 # =====================================================================================================
 # 1. Überprüfen, ob die venv bereits vorhanden ist oder nicht.
-venv_path = "venv"
+venv_path = ".venv"
 if not os.path.exists(venv_path):
     # Wenn die venv nicht vorhanden ist, erstellen Sie sie.
     subprocess.run(["python", "-m", "venv", venv_path])

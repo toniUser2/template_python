@@ -1,13 +1,9 @@
-import os
-import sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 import pytest
-from src import main
 
-def test_main():
-    main.main()
-    
-if __name__ == "__main__":
-    test_main()
-    
+from template_python.main import main
+
+
+def test_main_prints_greeting(capsys: pytest.CaptureFixture[str]) -> None:
+    main()
+
+    assert capsys.readouterr().out == "Hello, world!\n"
