@@ -27,11 +27,18 @@ python -m template_python.main   # alternative
 ## Development
 
 ```powershell
+python scripts/check.py   # run ALL checks (same as CI): lint, format, types, tests, build
+
 pytest                 # run tests
 ruff check .           # lint
 ruff check . --fix     # lint + auto-fix
 ruff format .          # format code
+pyright                # type check (strict, same rules as Pylance)
+python -m build        # build wheel + sdist into dist/
 ```
+
+CI runs the same checks on every push via GitHub Actions
+([.github/workflows/ci.yml](.github/workflows/ci.yml)).
 
 Dependencies are managed in [pyproject.toml](pyproject.toml):
 
@@ -44,7 +51,9 @@ After changing them, run `pip install -e ".[dev]"` again.
 
 ```
 ├── docs/                  # concept, decisions, diagrams → see docs/README.md
+├── .github/workflows/     # CI pipeline
 ├── scripts/setup_env.py   # environment setup
+├── scripts/check.py       # run all checks locally
 ├── src/template_python/   # source code (the package)
 ├── tests/                 # pytest tests
 └── pyproject.toml         # metadata, dependencies, pytest + ruff config

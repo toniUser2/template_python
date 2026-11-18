@@ -16,6 +16,8 @@ dependencies = [
 dev = [
     "pytest>=8",
     "ruff>=0.6",
+    "pyright>=1.1.380",
+    "build>=1.2",
 ]
 
 [project.scripts]
@@ -51,3 +53,12 @@ select = [
     "UP",  # pyupgrade
     "SIM", # flake8-simplify
 ]
+
+# ---------------------------------------------------------------------------
+# pyright (type checker, also used by Pylance in VS Code)
+# ---------------------------------------------------------------------------
+[tool.pyright]
+include = ["src", "tests", "scripts"]
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"

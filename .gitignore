@@ -7,6 +7,10 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 
+# Build output (python -m build)
+build/
+dist/
+
 # Tool caches
 .pytest_cache/
 .ruff_cache/
